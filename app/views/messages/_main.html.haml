@@ -1,0 +1,33 @@
+.chat-main
+  .chat-main__header
+    .chat-main__header__left
+      .chat-main__header__left__upper
+        %p.group-name GROUP NAME
+      .chat-main__header__left__bottom
+        .members member:
+    .chat-main__header__right
+      =link_to "", class: "mh-link" do
+        = icon('fas', 'users-cog',  class: "main-icon")
+        %span<>
+        .chat-main__header__right__bottom
+          EDIT
+  .chat-main__messages
+    .message
+      .message__upper-box
+        .message__upper-box__user-name
+          USER NAME
+        .message__upper-box__date
+          DATE
+      .message__bottom-box
+        .sentence
+          hello
+        %image
+  .chat-main__form
+    %form
+      .new-message
+        %input{:name => "", class: "input-message",:placeholder => "Type a message", :type => "text"}/
+        %label.form-label
+          = icon('far', 'file-image',  class: "main-icon")
+          %input{:name => "", class: "upload-image",:placeholder => "Type a message", :type => "file"}/
+      %input{class: "send-btn",type: "submit"}
+        

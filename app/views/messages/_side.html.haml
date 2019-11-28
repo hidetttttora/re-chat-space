@@ -1,0 +1,17 @@
+.side-bar
+  .side-bar__top
+    .side-bar__top__left
+      USER NAME
+    .side-bar__top__right
+      =link_to "", class: "sh-link" do
+        = icon('far', 'edit',  class: "side-icon")
+        %span<>
+      =link_to "", class: "sh-link" do
+        = icon('fas', 'user-cog',  class: "side-icon")
+  .side-bar__groups
+    =link_to "", class: "group-link" do
+      .group
+        .group__name
+          GROUP NAME
+        .group__last-message
+          LAST MESSAGE

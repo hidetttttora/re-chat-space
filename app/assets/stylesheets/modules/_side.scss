@@ -1,0 +1,55 @@
+.wrapper {
+  display: flex;
+}
+.sh-link {
+  color: inherit;
+  margin-right: 5px;
+}
+a:hover{
+  color : #ff7043;
+}
+a:after {
+  position: absolute;
+  content: attr(href);
+  display: none;
+}
+a:hover:after {
+  display: block;
+}
+
+.group-link {
+  text-decoration: none;
+  color: dimgray;
+}
+
+
+.side-bar {
+  width: 300px;
+  font-family: monospace;
+  font-size: 20px;
+    &__top {
+    background-color: dimgray;
+    color: white;
+    height: 100px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 39px 20px;
+  }
+  &__groups {
+    background-color :whitesmoke;
+    color: lightskyblue;
+    height: calc(100vh - 100px);
+    box-sizing: border-box;
+    padding: 15px 20px 0;
+    .group {
+      &__name {
+        font-weight: bold;
+      }
+      &__last-message {
+        font-size: 15px;
+      }
+    }
+  }
+}

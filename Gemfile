@@ -56,3 +56,5 @@ gem 'omniauth-twitter'
 gem 'dotenv-rails'
 gem 'haml-rails'
 gem "font-awesome-sass"
+gem 'devise'
+gem 'carrierwave'

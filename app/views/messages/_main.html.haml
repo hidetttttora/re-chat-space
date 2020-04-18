@@ -26,11 +26,11 @@
             hello
           %img
   .chat-main__form
-    %form
+    = form_with model: [@group, @message], do |f|
       .new-message
-        %input{:name => "", class: "input-message",:placeholder => "Type a message", :type => "text"}/
-        %label.form-label
+        = f.text_field :content, class: "input-message", placeholder: "Type a message"
+        = f.label class: 'form-label'
           = icon('far', 'file-image',  class: "main-icon")
-          %input{:name => "", class: "upload-image",:placeholder => "Type a message", :type => "file"}/
-      %input{class: "send-btn",type: "submit"}
+          = f.file_field :image, class: "upload-image", multiple: true
+      = f.submit class: "send-btn"
         

@@ -36,6 +36,17 @@ a:hover:after {
     justify-content: space-between;
     box-sizing: border-box;
     padding: 39px 20px;
+    &__left {
+      display: flex;
+      img.user-avator {
+        background-color: white;
+        height: 40px;
+        width: 40px;
+        border-radius: 60px 60px 60px 60px;
+        margin-top: -3px;
+        margin-right: 10px;
+      }
+    }
   }
   &__groups {
     background-color :whitesmoke;

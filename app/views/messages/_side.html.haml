@@ -1,17 +1,28 @@
 .side-bar
   .side-bar__top
     .side-bar__top__left
-      USER NAME
+      - if current_user.image.present?
+        = image_tag current_user.image.url, class: 'user-avator'
+      - else
+        
+      .user-name
+        = current_user.name
     .side-bar__top__right
-      =link_to "", class: "sh-link" do
+      =link_to new_group_path, class: "sh-link" do
         = icon('far', 'edit',  class: "side-icon")
         %span<>
       =link_to edit_user_path(current_user), class: "sh-link" do
         = icon('fas', 'user-cog',  class: "side-icon")
   .side-bar__groups
-    =link_to "", class: "group-link" do
-      .group
+    - if current_user.groups.present?
+      - current_user.groups.each do |group|
+        =link_to group_messages_path(group), class: "group-link" do
+          .group
+            .group__name
+              = group.name
+            .group__last-message
+              LAST MESSAGE
+    - else
+      .group 
         .group__name
-          GROUP NAME
-        .group__last-message
-          LAST MESSAGE
+          まだどこにも所属していません
